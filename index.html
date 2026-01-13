@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Co-Design Workshop | CPS-Week 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f4f7f6; }
+        
+        /* Header Design: Full Logo Background */
+        header { 
+            position: relative;
+            background-color: #000; 
+            color: #fff; 
+            padding: 100px 20px; 
+            text-align: center; 
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('workshop-logo.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: 0;
+            filter: brightness(0.8); /* Dims the image for text readability */
+        }
+        header h1, header p { position: relative; z-index: 1; margin: 0; }
+        header h1 { font-size: 2.2rem; text-shadow: 3px 3px 6px rgba(0,0,0,0.8); }
+        header p { font-size: 1.2rem; margin-top: 10px; font-weight: 400; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+
+        .container { background: #fff; padding: 2.5rem; margin: -40px 20px 20px 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; z-index: 2; }
+        .dates { background: #fdf2f2; padding: 1.5rem; border-left: 5px solid #d9534f; margin: 2rem 0; }
+        .submission-box { background: #f4f7f6; padding: 1.5rem; border-radius: 8px; border: 1px dashed #003366; margin: 1.5rem 0; }
+        h2 { color: #003366; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem; }
+        h3 { color: #003366; margin-top: 1.5rem; }
+        
+        .organizer-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; list-style: none; padding: 0; margin-top: 1.5rem; }
+        .organizer-item { background: #f9f9f9; padding: 15px; border-radius: 5px; border: 1px solid #ddd; }
+        
+        .contact-section { background: #eef; padding: 1.5rem; border-radius: 8px; text-align: center; margin-top: 2rem; }
+        .footer { text-align: center; margin-top: 3rem; font-size: 0.9rem; color: #777; padding-bottom: 2rem; }
+        ul li { margin-bottom: 8px; }
+        a { color: #003366; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Interactive Co-Design of Safe and Assured Autonomous Systems</h1>
+    <p>Workshop at CPS-Week 2026 | Saint Malo, France</p>
+</header>
+
+<div class="container">
+    <h2>About the Workshop</h2>
+    <p>Autonomous systems such as autonomous vehicles, drones, mobile robots, and emerging humanoids are moving from controlled labs into real-world deployments across manufacturing, construction, logistics, healthcare, and defense. While these systems must handle a long tail of site-specific tasks at deployment, critical knowledge about site-specific tasks, policies (how to solve tasks), environment assumptions, and system requirements often remains tacit and distributed across stakeholders—regulators, developers and integrators, field operators, and end users. To enable safe and effective operation across domains in society, this workshop focuses on methods to systematically elicit and formalize stakeholder knowledge and integrate it throughout the design, analysis, and verification of autonomous systems.</p>
+    <p>The workshop explores how large language models and other interactive, multimodal approaches can capture stakeholder input in natural forms (e.g., text, speech, diagrams, simulations, and demonstrations) and translate it into formal or semi-formal artifacts for assurance, testing, and verification. It recognizes that interactive co-design is also a human–computer interaction (HCI) challenge, requiring interfaces and backend representations that minimize user burden, surface ambiguity and inconsistency, and support iterative inspection and correction. By bringing together researchers and practitioners from CPS, IoT, autonomy, formal methods, and HCI, the workshop aims to catalyze discussion and share lessons—both successes and failures—on interactive knowledge elicitation, and to articulate a practical research agenda for the safe and assured deployment of autonomous systems in the real world.</p>
+
+    <h2>Call for Papers</h2>
+    <p>Topics of interest include, but are not limited to:</p>
+    <ul>
+        <li>Interactive elicitation of system requirements, task objectives, or task environments for autonomous systems</li>
+        <li>Safety constraints, assurance cases, and runtime safety envelopes derived from human input</li>
+        <li>Human–robot/system collaboration requirements in shared workspaces</li>
+        <li>Detecting and repairing inconsistencies, ambiguities, and missing assumptions in specifications with human-in-the-loop</li>
+        <li>Interpretable representations for users to inspect, debug, and correct formal artifacts</li>
+        <li>Verification, validation, and testing workflows supported by interactive co-design tools</li>
+        <li>Generating test scenarios, edge cases, and adversarial situations from stakeholder knowledge</li>
+        <li>Benchmark datasets, metrics, and evaluation protocols for interactive requirements tools</li>
+        <li>Case studies in interactive tacit knowledge elicitation in manufacturing, construction, healthcare, defense, and other high-stakes CPS deployments</li>
+        <li>Negative results, lessons learned, and failure modes of interactive/LLM-driven co-design</li>
+    </ul>
+
+    <h2>How to Submit</h2>
+    <p>The purpose of this workshop is to spark exciting discussions and share knowledge in this theme. Therefore, <strong>dual submission or re-submission of already accepted papers are permitted</strong>, provided they offer strong insight to spur discussions aligned with the workshop theme. Accepted papers will be made available through this workshop website.</p>
+    <p>The link for submission will be posted here soon.</p>
+    <div class="submission-box">
+        <strong>Formatting Guidelines:</strong>
+        <ul>
+            <li><strong>Length:</strong> At most 6 single-spaced pages (8.5" x 11").</li>
+            <li><strong>Format:</strong> 10-pt font size, two-column format, including figures, tables, and references.</li>
+            <li><strong>Templates:</strong> Submissions must use the LaTeX (preferred) or Word styles found <a href="https://www.acm.org/publications/proceedings-template">here</a>.</li>
+            <li><strong>LaTeX Specifics:</strong> Use the <code>acmart.cls</code> template with the <code>sigconf</code> option and 10-pt font.</li>
+            <li><strong>Review Process:</strong> This workshop follows a <strong>single-blind</strong> review process.</li>
+        </ul>
+    </div>
+
+    <div class="dates">
+        <h3>Important Dates</h3>
+        <ul>
+            <li><strong>Submission Deadline:</strong> February 15, 2026</li>
+            <li><strong>Author Notification:</strong> March 7, 2026</li>
+        </ul>
+    </div>
+
+    <h2>Organizers</h2>
+    <div class="organizer-list">
+        <div class="organizer-item">
+            <strong>Edward Kim</strong><br>
+            Postdoctoral Researcher, EECS<br>
+            University of California, Berkeley 
+        </div>
+        <div class="organizer-item">
+            <strong>Bjoern Hartmann</strong><br>
+            Associate Professor, EECS<br>
+            University of California, Berkeley 
+        </div>
+        <div class="organizer-item">
+            <strong>Yasser Shoukry</strong><br>
+            Associate Professor, EECS<br>
+            University of California, Irvine 
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h3>Questions?</h3>
+        <p>Contact us at: <strong><a href="mailto:ek65@eecs.berkeley.edu">ek65@eecs.berkeley.edu</a></strong></p>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2026 CPS-Week Workshop on Interactive Co-Design.
+</div>
+
+</body>
+</html>
